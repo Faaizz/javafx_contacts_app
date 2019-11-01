@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.faaizz.Utils.Test_ContactData" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-11-01T18:15:46" hostname="DESKTOP-4T9LH3P" time="0.093">
+<testsuite name="com.faaizz.Utils.Test_ContactData" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-11-01T20:03:18" hostname="faaizz-HP-Pavilion-Laptop-15-cc0xx" time="0.061">
   <properties/>
-  <testcase name="test_editContactInFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.048"/>
-  <testcase name="test_readJsonFromFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.006"/>
-  <testcase name="test_addContactToFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.006"/>
-  <testcase name="test_writeJsonToFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.004"/>
-  <testcase name="test_jsonToContacts()" classname="com.faaizz.Utils.Test_ContactData" time="0.003"/>
-  <testcase name="test_searchContacts()" classname="com.faaizz.Utils.Test_ContactData" time="0.006"/>
-  <testcase name="test_deleteContactFromFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.009"/>
-  <testcase name="test_contactsToJson()" classname="com.faaizz.Utils.Test_ContactData" time="0.003"/>
+  <testcase name="test_editContactInFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.031"/>
+  <testcase name="test_readJsonFromFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.004"/>
+  <testcase name="test_addContactToFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.004"/>
+  <testcase name="test_writeJsonToFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.002"/>
+  <testcase name="test_jsonToContacts()" classname="com.faaizz.Utils.Test_ContactData" time="0.001"/>
+  <testcase name="test_searchContacts()" classname="com.faaizz.Utils.Test_ContactData" time="0.004"/>
+  <testcase name="test_deleteContactFromFile()" classname="com.faaizz.Utils.Test_ContactData" time="0.005"/>
+  <testcase name="test_contactsToJson()" classname="com.faaizz.Utils.Test_ContactData" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

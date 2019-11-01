@@ -25,7 +25,7 @@ public class Main extends Application {
 
             Parent root= FXMLLoader.load(getClass().getResource("main.fxml"));
 
-            primaryStage.setTitle("Admin Portal");
+            primaryStage.setTitle("Contacts");
 
             //GET SCREEN SIZE
             Rectangle2D screenSize= Screen.getPrimary().getBounds();

@@ -63,7 +63,7 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\contacts-1.4.jar;%APP_HOME%\lib\gson-2.8.6.jar;%APP_HOME%\lib\javafx-fxml-12.0.1-win.jar;%APP_HOME%\lib\javafx-controls-12.0.1-win.jar;%APP_HOME%\lib\javafx-controls-12.0.1.jar;%APP_HOME%\lib\javafx-graphics-12.0.1-win.jar;%APP_HOME%\lib\javafx-graphics-12.0.1.jar;%APP_HOME%\lib\javafx-base-12.0.1-win.jar;%APP_HOME%\lib\javafx-base-12.0.1.jar
+set CLASSPATH=%APP_HOME%\lib\contacts-1.4.jar;%APP_HOME%\lib\gson-2.8.6.jar;%APP_HOME%\lib\javafx-fxml-12.0.1-linux.jar;%APP_HOME%\lib\javafx-controls-12.0.1-linux.jar;%APP_HOME%\lib\javafx-controls-12.0.1.jar;%APP_HOME%\lib\javafx-graphics-12.0.1-linux.jar;%APP_HOME%\lib\javafx-graphics-12.0.1.jar;%APP_HOME%\lib\javafx-base-12.0.1-linux.jar;%APP_HOME%\lib\javafx-base-12.0.1.jar
 
 @rem Execute contacts
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %CONTACTS_OPTS%  -classpath "%CLASSPATH%" com.faaizz.GUI.Main %CMD_LINE_ARGS%
