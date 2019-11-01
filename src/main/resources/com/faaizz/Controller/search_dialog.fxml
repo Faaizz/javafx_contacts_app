@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.Button?>
+<GridPane fx:id= "root_pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.faaizz.Controller.SearchDialogController" alignment="TOP_CENTER"
+            prefHeight="400" prefWidth="600"
+>
+
+    <!--ROW 0-->
+    <HBox fx:id="searchbar_hbox" alignment="CENTER" GridPane.rowIndex="0" spacing="5">
+        <!--TEXTFIELD-->
+        <TextField fx:id="search_textfield" HBox.hgrow="ALWAYS">
+            <promptText>
+                Search...
+            </promptText>
+        </TextField>
+
+        <!--BUTTON-->
+        <Button fx:id="search_button"  onAction="#handleSearch">
+            <graphic>
+                <ImageView>
+                    <Image url="@img/search.png" />
+                </ImageView>
+            </graphic>
+             <cursor>
+                <Cursor fx:constant="HAND" />
+             </cursor>
+        </Button>
+    </HBox>
+
+</GridPane>

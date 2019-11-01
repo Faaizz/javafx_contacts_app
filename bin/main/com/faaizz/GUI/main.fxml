@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root_border_pane" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.faaizz.Controller.Main">
+
+    <!--    T   O   P   -->
+    <top>
+        <VBox BorderPane.alignment="CENTER">
+
+            <!--MENUBAR-->
+            <MenuBar>
+                <Menu text="Contacts">
+                    <items>
+                        <MenuItem text="New..." onAction="#handleNewContact" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit"  onAction="#handleExit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+
+            <!--TOOLBAR-->
+            <HBox id="toolbar" spacing="15">
+                <!--NEW-->
+                <Label onMouseClicked="#handleNewContact">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@img/new.png" />
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="New..." />
+                    </tooltip>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+
+                <!--EDIT-->
+                <Label onMouseClicked="#handleEditContact">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@img/edit.png" />
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Edit" />
+                    </tooltip>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+
+                <!--DELETE-->
+                <Label onMouseClicked="#handleDeleteContact">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@img/delete.png" />
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Delete" />
+                    </tooltip>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+
+                <!--SEARCH VBOX-->
+                <!--SEARCH TEXTFIELD-->
+                <!--SEARCH ICON-->
+                <Label onMouseClicked="#handleSearch">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@img/search.png" />
+                        </ImageView>
+                    </graphic>
+                    <tooltip>
+                        <Tooltip text="Search" />
+                    </tooltip>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+
+
+                <!--PROPERTIES-->
+                <padding>
+                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+
+
+
+            </HBox>
+        </VBox>
+    </top>
+
+
+    <!--    L   E   F   T   -->
+    <left>
+       <ListView fx:id="contact_list" BorderPane.alignment="CENTER" />
+    </left>
+
+
+    <!--    C   E   N   T   E   R   -->
+    <center>
+        <GridPane id="details">
+
+            <!--LETTER ROW-->
+            <VBox alignment="TOP_CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <Label fx:id="letter_symbol_label" id="letter_symbol" >
+                    <!--FONT-->
+                    <font>
+                        <Font size="40" />
+                    </font>
+                </Label>
+            </VBox>
+
+            <!--NAME ROW-->
+            <VBox alignment="TOP_CENTER" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+
+                <Label fx:id= "name_label" GridPane.columnIndex="0" GridPane.rowIndex="0">
+
+                    <!--FONT-->
+                    <font>
+                        <Font size="20" />
+                    </font>
+
+                </Label>
+
+                <!--PROPERTIES-->
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+
+                <!--MARGIN-->
+                <GridPane.margin>
+                    <Insets top="15.0" />
+                </GridPane.margin>
+
+            </VBox>
+
+
+            <!--PHONE NUMBERS ROW-->
+            <VBox GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" spacing="5">
+
+                <!--MOBILE-->
+                <VBox>
+                    <Label text="Mobile">
+                        <font>
+                            <Font size="10" />
+                        </font>
+                    </Label>
+
+                    <Label fx:id="mobile_label"  />
+                </VBox>
+
+                <!--PHONE-->
+                <VBox>
+                    <Label text="Phone">
+                        <font>
+                            <Font size="10" />
+                        </font>
+                    </Label>
+
+                    <!--PHONE NUMBER-->
+                    <Label fx:id="phone_label"  />
+                </VBox>
+
+                <!--PROPERTIES-->
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+
+                <!--MARGIN-->
+                <GridPane.margin>
+                    <Insets top="15.0" />
+                </GridPane.margin>
+
+            </VBox>
+
+            <!--EMAIL ROW-->
+            <VBox GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                <!--EMAIL LABEL-->
+                <Label text="Email">
+                    <font>
+                        <Font size="10" />
+                    </font>
+                </Label>
+
+                <!--EMAIL-->
+                <Label fx:id="email_label"  />
+
+                <!--PROPERTIES-->
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </padding>
+
+                <!--MARGIN-->
+                <GridPane.margin>
+                    <Insets top="5.0" />
+                </GridPane.margin>
+
+            </VBox>
+
+            <!--PROPERTIES-->
+            <padding>
+                <Insets bottom="25.0" left="25.0" right="25.0" top="0" />
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+            <RowConstraints />
+            </rowConstraints>
+
+
+        </GridPane>
+    </center>
+
+</BorderPane>
